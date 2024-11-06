@@ -20,19 +20,27 @@ const UserInput = props =>{
     }
 
     return (
-        <form>
-            <div class={styles['form-group']}>
-                <label>User name</label>
-                <input type="text" id="user-name" onChange={onChangeHandler}/>
+        <div className={styles['card-back']}>
+            <div className={styles['card-header']}>
+                <p>Inter Usre Name and Age</p>
             </div>
-            <div className={styles['form-group']}>
-                <label>Age</label>
-                <input type="number" id="age"  onChange={onChangeHandler}/>
-            </div>
-            <div>
-                <button className={styles['btn-add']}>Add</button>
-            </div>
-        </form>
+            <div className={styles.card}>
+                <form>
+                    <div className={styles['form-group']}>
+                            <label>User name</label>
+                        <input type="text" id="user-name" onChange={onChangeHandler}/>
+                    </div>
+                    <div className={styles['form-group']}>
+                        <label>Age</label>
+                        <input type="number" id="age"  onChange={onChangeHandler}/>
+                    </div>
+                    <div>
+                        <button className={styles['btn-add']}>Add</button>
+                    </div>
+                </form>
+            </div>  
+        </div>
+        
     );
 }
 

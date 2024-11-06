@@ -4,8 +4,15 @@
 
 html {
   font-family: sans-serif;
+  background-color: #313131;
 }
 
 body {
   margin: 0;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }

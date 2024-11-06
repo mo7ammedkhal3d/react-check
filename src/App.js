@@ -7,7 +7,7 @@ function App() {
   const [usersList,setUsersList] = useState();
   
   return (
-    <div>
+    <div className='container'>
       <UserInput />
       <usersList />
     </div>

@@ -3,7 +3,7 @@ import styles from './UserInput.module.css';
 
 const initalValues = {
     'name':'',
-    'age':0,
+    'age':'',
 }
 
 const UserInput = props =>{
@@ -21,11 +21,11 @@ const UserInput = props =>{
 
     const submitHandler = event =>{
         event.preventDefault();
-        const formElements = event.target.elements;
+        const formElements = event.target.elements;        
 
         const user = {
             id:Math.random().toString(),
-            name:formElements.name.vlaue,
+            name:formElements.name.value,
             age:formElements.age.value,
         }
 
@@ -33,6 +33,7 @@ const UserInput = props =>{
 
         setUserInput(initalValues);
     }
+    
 
     return (
         <div className={styles['card-back']}>

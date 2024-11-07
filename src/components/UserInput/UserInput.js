@@ -22,7 +22,7 @@ const UserInput = props =>{
     return (
         <div className={styles['card-back']}>
             <div className={styles['card-header']}>
-                <p>Inter Usre Name and Age</p>
+                <p>Inter User Name and Age</p>
             </div>
             <div className={styles.card}>
                 <form>

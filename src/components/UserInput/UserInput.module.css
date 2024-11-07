@@ -1,9 +1,11 @@
 .card-back{
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
     background-color: #bb1389;
-    margin-top: 10rem;
+    margin-top: 5rem;
+    color: white;
     width: 50%;
-    height: 50%;
+    height: fit-content;
 }
 
 .card-header>p{
@@ -49,13 +51,13 @@
     border-radius: 0.5rem;
     color: white;
     background-color: #bb1389;
-    transition: 0.5s ease;
+    transition: 0.2s ease;
 }
 
 .btn-add:hover{
-    transform: scale(1.007);
+    transform: scale(1.00);
     background-color: #85035e;
     color: gray;
-    box-shadow: 1px 1px 15px #85035e;
+    box-shadow: 0px 0px 7px #fff;
 }
 

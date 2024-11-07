@@ -1,37 +1,24 @@
 import React,{useState} from 'react';
-import UserInput from './components/UserInput/UserInput';
-import UserList from './components/UserList/UserList';
-
-const users =[
-  {
-    id:Math.random().toString(),
-    name:'mohammed khaled binhazim',
-    age:27
-  },
-  {
-    id:Math.random().toString(),
-    name:'Abdullah khaled binhazim',
-    age:22,
-  }
-] 
+import AddUser from './components/Users/AddUser';
+import UsersList from './components/Users/UsersList';
 
 function App() {
 
-  const [usersList,setUsersList] = useState(users);
+  const [usersList,setUsersList] = useState([]);
 
-  const onAddUserHandler = user =>{
-    setUsersList(prevUsers=>{
+  const addUserHandler = user =>{
+    setUsersList(prevUsersList=>{
       return[
-        ...prevUsers,
+        ...prevUsersList,
         user,
       ]
     })
   }
   
   return (
-    <div className='container'>
-      <UserInput onAddUser={onAddUserHandler}/>
-      <UserList usersList={usersList}/>
+    <div>
+      <AddUser onAddUser={addUserHandler}/>
+      {usersList.length && <UsersList users={usersList}/>}
     </div>
   );
 }

@@ -1,8 +1,25 @@
-import React,{useState} from "react";
+import React,{useState,Fragment} from "react";
 import Card from "../UI/Card/Card";
 import classes from './AddUser.module.css';
 import Button from "../UI/Button/Button";
 import ErrorModal from "../ErrorModal/ErrorModal";
+import Wrapper from '../Helpers/Wrapper';
+
+//#region how can return multi element Folder 10 video 2
+    // return(
+    //     [
+    //         error && <ErrorModal key="error-modal" title={error.title} massege={error.message} onConfirm={clearErrorHandler}/>,
+    //         <Card key="add-user-card" className={classes.input}>
+    //             <form onSubmit={addUserHandler}>
+    //                 <label htmlFor="user-name">User Name</label>
+    //                 <input value={enteredUserName} type="text" id="user-name" onChange={onchangeUserNameHandler}/>
+    //                 <label htmlFor="age">Age (Years)</label>
+    //                 <input value={enteredAge} type="text" id="age" onChange={onChangeAgeHandler}/>
+    //                 <Button type={'submit'}>Add User</Button>
+    //             </form>
+    //         </Card>
+    //     ]   
+//#endregion
 
 const AddUser = props =>{
 
@@ -54,9 +71,9 @@ const AddUser = props =>{
     }
 
     return(
-        <div>
-            {error && <ErrorModal title={error.title} massege={error.message} onConfirm={clearErrorHandler}/>}
-            <Card className={classes.input}>
+        <Fragment>
+            {error && <ErrorModal key="error-modal" title={error.title} massege={error.message} onConfirm={clearErrorHandler}/>}
+            <Card key="add-user-card" className={classes.input}>
                 <form onSubmit={addUserHandler}>
                     <label htmlFor="user-name">User Name</label>
                     <input value={enteredUserName} type="text" id="user-name" onChange={onchangeUserNameHandler}/>
@@ -65,8 +82,7 @@ const AddUser = props =>{
                     <Button type={'submit'}>Add User</Button>
                 </form>
             </Card>
-        </div>
-        
+        </Fragment>
     );
 }
 

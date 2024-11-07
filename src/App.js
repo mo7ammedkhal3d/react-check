@@ -1,6 +1,8 @@
-import React,{useState} from 'react';
+import React,{useState,Fragment} from 'react';
 import AddUser from './components/Users/AddUser';
 import UsersList from './components/Users/UsersList';
+import Wrapper from './components/Helpers/Wrapper';
+import { Fragment } from 'react';
 
 function App() {
 
@@ -16,10 +18,10 @@ function App() {
   }
   
   return (
-    <div>
+    <Fragment>
       <AddUser onAddUser={addUserHandler}/>
       {usersList.length && <UsersList users={usersList}/>}
-    </div>
+    </Fragment>
   );
 }
 

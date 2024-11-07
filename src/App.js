@@ -1,24 +1,24 @@
 import React,{useState} from 'react';
-import UserInput from './components/UserInput/UserInput';
-import UserList from './components/UserList/UserList';
+import AddUser from './components/Users/AddUser';
+import UsersList from './components/Users/UsersList';
 
 function App() {
 
   const [usersList,setUsersList] = useState([]);
 
-  const onAddUserHandler = user =>{
-    setUsersList(prevUsers=>{
+  const addUserHandler = user =>{
+    setUsersList(prevUsersList=>{
       return[
-        ...prevUsers,
+        ...prevUsersList,
         user,
       ]
     })
   }
   
   return (
-    <div className='container'>
-      <UserInput onAddUser={onAddUserHandler}/>
-      {usersList.length > 0 && <UserList usersList={usersList}/>}
+    <div>
+      <AddUser onAddUser={addUserHandler}/>
+      {usersList.length && <UsersList users={usersList}/>}
     </div>
   );
 }

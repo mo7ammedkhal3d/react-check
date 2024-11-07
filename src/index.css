@@ -4,8 +4,17 @@
 
 html {
   font-family: sans-serif;
+  background-color: #313131;
 }
 
 body {
   margin: 0;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  height: auto;
 }

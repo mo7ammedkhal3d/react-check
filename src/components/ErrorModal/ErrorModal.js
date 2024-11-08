@@ -1,11 +1,11 @@
-import React from "react";
+import React,{Fragment} from "react";
 import Card from '../UI/Card/Card';
 import Button from '../UI/Button/Button';
 import classes from './ErrorModal.module.css';
 
 const ErrorModal = props =>{
     return (
-        <div>
+        <Fragment>
             <div className={classes.backdrop} onClick={props.onConfirm}>
 
             </div>
@@ -20,7 +20,7 @@ const ErrorModal = props =>{
                     <Button onClick={props.onConfirm}>Okay</Button>
                 </footer>
             </Card>
-        </div>
+        </Fragment>
    )
 }
 
